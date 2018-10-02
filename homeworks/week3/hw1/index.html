@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8"/>
+  <!--
+  下列：讓網頁不會自動因手機螢幕變小而扭曲，使得RWD網頁能正常執行
+  initial-scale=1 => 不要縮放網頁的意思
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Week3_hw1">
+  <title>Joanne's week3_hw1</title>
+  <style>
+/*
+* { border: 1px solid black;} 
+*/
+
+* { box-sizing: border-box; }
+
+
+body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  color: #666
+ 
+}
+
+/* 架構 */
+.content_contanier {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*導覽列*/
+.nav_area {
+  background: rgb(36, 37, 37);
+  width: 100%;
+  margin: 0px;
+  padding: 10px;
+  position: fixed; /*固定在畫面上不動*/
+  top: 0px;
+}
+
+.btn {
+  display: inline;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.btn2, .btn3 {
+  color: grey;
+  transition: all 0.2s ease;
+}
+
+.btn2:hover, 
+.btn3:hover{
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+/*上半部*/
+.top{
+  text-align: left;
+  margin-top: 0px;
+  background: lightblue;
+}
+
+.top_container {
+  /*border: 1px solid yellow;*/
+  margin: 0 50px;
+  
+}
+
+h1 {
+  font-size: 50px;
+  padding-top: 35px;
+  color: black;
+}
+
+.btnLearnMore {
+  background: #1F7Ef2;
+  display: inline-block;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 6px;
+  color: whitesmoke;
+  margin-bottom: 15px;
+}
+
+.btnLearnMore:hover {
+  background:  #0060D5;
+  cursor: pointer;
+}
+
+/*下半部*/
+.down {
+  display: flex; /*flex外容器*/
+  flex-flow: row wrap; /*direction: row; wrap: 換行*/
+  justify-content: center; /*主要軸線對齊，主要軸線是以flex-direction的方向決定*/
+}
+
+.container {
+  /*border: 1px solid green;*/
+  flex: 1; /*預設為flex-grow，是一內元件：1 （只佔contanier的三分之一）*/
+  margin-left: 45px;
+  padding: 5px;
+ 
+}
+
+h3{
+  font-size: 36px;
+}
+
+.button {
+  background: grey;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 12px 20px;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button:hover{
+  background: #939393;
+  cursor: pointer;
+}
+
+hr {
+  width: 92%;
+}
+
+footer {
+  margin-left: 40px;
+  padding: 5px 15px;
+}
+
+@media screen and (max-width: 750px) {
+  .down .containers {
+    flex-basis: 100%;
+  }
+}
+
+   
+
+  </style>
+
+<body>
+  <div class="content_contanier">
+    <ul class="nav_area">
+      <li class="btn btn1">Nvavbar</li>
+      <li class="btn btn2">Home</li>
+      <li class="btn btn3">Link</li>
+    </ul>
+    <div class="top">
+      <div class="top_container">
+        <h1>Hello, World!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a startingpoint to careate something more unique.</p>
+        <div class="btnLearnMore">Learn more >></div>
+      </div>
+    </div>
+    <!-- 下半部-->
+    <div class="down">
+      <div class="container container1">
+        <h3>Heading</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <div class="button">View details >></div>
+    </div>
+    <div class="container container2">
+        <h3>Heading</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <div class="button">View details >></div>
+    </div>
+    <div class="container container3">
+        <h3>Heading</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <div class="button">View details >></div>
+    </div>
+   
+  </div>
+     <hr/>
+    <footer>© zuppachu's Homework 2</footer>
+</body>
+</html>
