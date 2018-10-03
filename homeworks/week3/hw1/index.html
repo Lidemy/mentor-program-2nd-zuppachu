@@ -138,7 +138,15 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
-  .down .containers {
+  
+  .down {
+    display: flex;
+    flex-direction: column;/*這邊改成這樣， 750px 以下直接變成直列展示！*/
+    margin: 10px 20px 10px 10px;
+
+  }
+
+  .containers {
     flex-basis: 100%;
   }
 }
