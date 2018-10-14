@@ -8,7 +8,7 @@ function reverse(str) {
 
 	for(var i=str.length-1; i>=0; i--) {
 
-		newString += str[i]	
+		newString += str[i]	//第 i 個的 string
 	}
 
 	return newString
