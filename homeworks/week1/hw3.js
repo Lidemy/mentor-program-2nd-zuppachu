@@ -14,11 +14,9 @@ function reverse(str) {
 	return newString
 }
 
-
 console.log(reverse('1,2,3,2,1'))
 console.log(reverse('1abc2'))
 console.log(reverse('yoyoyo'))
-
 
 //方法二： .reverse()
 

@@ -11,11 +11,12 @@ function join(arr, concatStr) {
 	}
 	return result
 
+
 }
+
 console.log(join([1, 2, 3], ''))
 console.log(join(["a", "b", "c"], "!"))
 console.log(join(["a", 1, "b", 2, "c", 3], ','))
-
 
 //寫法二： aab/！！！bcc/！！！cce 
 //(規則變成把第一個元素先列出來 再加 ！！！)

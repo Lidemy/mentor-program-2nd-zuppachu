@@ -6,7 +6,7 @@ function printStars(n) {
 	if(n<=1 && n>=30) {
 		return undefined
 	}
-
+	
 	var ans = ''
 
 	for(i=0; i<n; i++) {

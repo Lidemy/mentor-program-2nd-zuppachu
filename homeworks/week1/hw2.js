@@ -10,6 +10,7 @@ console.log(swapFistLetter('Nick'))
 console.log(swapFistLetter(',hello'))
 console.log(swapFistLetter('！！！！abchello'))
 
+
 //老師解法
 function capitalize(str) {
 	//某些時候可用字串當陣列 str[0]
