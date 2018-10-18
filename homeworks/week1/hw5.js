@@ -65,7 +65,8 @@ console.log(repeat('a', 5))
 
 
 /* 我的錯誤答案ＸＤ
-var str =[] //這是要放外邊呀呀呀，放裡面錯誤！跑出空字串ＸＤ 老師說錯誤，沒有人放外邊的 
+var str =[] //這是要放外邊呀呀呀，放裡面錯誤！跑出空字串ＸＤ 
+上面老師說錯誤，沒有人放外邊的 
 function join(str, concatStr) {
 
 	return str.join(concatStr)
