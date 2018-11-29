@@ -1,0 +1,117 @@
+* {
+          margin: 0px;
+          box-sizing: border-box;
+          font-family: 'Play', sans-serif;
+          color: #566965;
+        }
+
+        body {
+          background: linear-gradient(280deg, #feead2, #fff8ee);
+          position: relative;
+        }
+
+        .calculator {
+          background-color: #FFBCB1;
+          border: 2px solid #FFBCB1;
+          border-radius: 10px;
+          width: 340px;
+          height: 435px;
+          margin: 40px auto;
+        }
+
+        .screen {
+          border-top: 4px solid gray;
+          border-radius: 5px;
+          width: 260px;
+          height: 65px;
+          margin: 30px auto;
+          padding-right: 5px;
+          background-color: whitesmoke;
+          text-align: right;
+          font-size: 53px;
+        }
+
+
+        .btns {
+          /*border: 1px solid green;*/
+          width: 260px;
+          margin: 20px auto;
+          position: relative;
+        }
+
+        span {
+          border-radius: 5px;
+          background-color: #FEDDCC;
+          box-shadow: 0px 4px graytext;
+          text-align: center;
+          transition: all 0.3s ease-in-out;
+        }
+
+        span:hover{
+          cursor: pointer;
+          background-color: #B3B99D;
+          box-shadow: 0px 4px #73978C;
+        }
+
+        
+        .container > span {
+          margin: 6px 10px 11px 15px;
+        }
+
+        .operation {
+          width: 50px;
+          height: 45px;
+          padding: 8px;
+          margin: 5px 0px 0px 10px;
+          
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .side > .operation {
+          color: purple;
+        }
+
+        .side > .operation:hover{
+          color: yellow;
+          background-color: #be77ff;
+          box-shadow: 0px 4px  #6f00d2;
+        }
+
+        #cancle {
+          color: red;
+        }
+
+        #cancle:hover{
+          color:yellow;
+        }
+
+        
+
+        .numbers > span {
+          width: 60px;
+          height: 60px;
+          padding: 15px;
+          margin: 5px 3px 5px 0px;
+          display: inline-block;
+        }
+
+        .side {
+          width: 60px;
+          height: 280px;
+          position: absolute;
+          right: 0px;
+        }
+
+
+        footer p:nth-child(1) {
+          font-size: 5px;
+        }
+
+        footer {
+          font-size: 20px;
+          padding: 3px;
+          margin: 50px auto;
+          text-align: center;
+        }
