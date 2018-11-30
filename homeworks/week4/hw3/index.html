@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+
+       	body{
+       		background: whitesmoke;
+       	}
+        
+        /* a {text-decoration: none;} */
+       
+
+        .content {
+        	/*border: solid 1px black;*/
+
+            width: 80%;
+            margin: 80px auto;
+            
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            padding: 40px;
+        }
+
+        .stream {
+            width: 300px;
+            height: 290px;
+            margin: 20px;
+        }
+
+         .streamPic {
+            width: 100%;
+            vertical-align: bottom; /*圖片與下面對齊*/
+        }
+
+         .streamer {
+            display: flex;
+            justify-content: flex-start;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+         .streamerPic {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            margin: 10px;
+        }
+         
+         .streamerDetail {
+            padding: 0;
+            margin: 5px 20px;
+
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center; /*水平方向的置中*/
+            align-items: center; /*垂直方向的置中*/
+        }
+        
+
+         .streamerDetail li {
+         	/*border: solid 1px black;*/
+            width: 150px;
+            color: white;
+            font-size: 22px;
+            
+            /*list-style: none;*/
+            
+            margin-bottom: 4px;
+            white-space: nowrap;
+
+            
+            /*下面兩個一起用，刪節號會出現*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+           
+        }
+
+        .navbar {
+        	width: 100%;
+        	height: 70px;
+        	background-color: #6441a4;
+ 
+        	position: fixed;
+        		top: 0px;
+        		left: 0px;
+        }
+
+        .navbar > img {
+        	height: 70px;
+        	width: 70px;
+        	
+         
+    </style>
+        
+       
+ 
+</head>
+ <body>
+ 		<div class='navbar'>
+ 			<img src='https://www.twitch.tv/p/assets/uploads/glitch_474x356.png'>
+ 		</div>
+	    <div class="content">   
+	        <div class="stream">
+	            <img class="streamPic">
+	            <div class="streamer">
+	                <img class="streamerPic">
+	                <ul class="streamerDetail">
+	                    <li>頻道名稱</li>
+	                    <li>實況主名稱</li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+<script>
+	
+let request = new XMLHttpRequest();
+request.open('GET', 'https://api.twitch.tv/kraken/streams/?game=League%20of%20Legends&limit=20', true);
+
+//setRequestHeader(header,value) => 請求添加 HTTP 頭 （規定名稱,規定的值）
+request.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json');
+request.setRequestHeader('Client-ID', 'tkqtnof7fpyuvhiwgz6w5onbusdn42');
+request.send(null);
+
+
+request.onload = () => {
+    let channel = JSON.parse(request.responseText).streams; //.streams 在 twich api example resoponse 內。 
+    let streamerChannel = '';
+    for (let i = 0; i < channel.length; i++) {
+        streamerChannel += `
+        <div class="stream">
+            <a href="${channel[i].channel.url}"><img class="streamPic" src="${channel[i].preview.medium}"></a>
+            <div class="streamer">
+                <img class="streamerPic" src="${channel[i].channel.logo}">
+                <ul class="streamerDetail">
+                    <li>${channel[i].channel.status}</li>
+                    <li>${channel[i].channel.display_name}</li>
+                </ul>
+            </div>
+        </div>
+        `;
+    }
+    //channel[i].channel.logo 取 logo 資料
+    //channel[i].preview.medium 取 畫面 資料
+    document.querySelector('.content').innerHTML = streamerChannel
+}
+
+
+
+</script>
+</body>
+</html> 
+

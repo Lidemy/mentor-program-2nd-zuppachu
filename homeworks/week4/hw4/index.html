@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>week4 hw4 化繁為簡</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+
+		html,body{
+		  margin: 0px;
+		  max-height: 400px;
+		  max-width: 400px;
+		}
+
+		.div1 {
+		  margin: 180px auto;
+		  text-align: center;
+		  
+		  position: relative;
+		  left: 500px;
+		  top: 100px;
+		}
+
+		.div2{
+		  text-align: center;
+		  margin-top: -10px;
+		  
+		  position: absolute ;
+		  	top:120px;
+	    	right:0;
+	    	bottom:0;
+	    	left:0;
+		}
+
+		h1 {
+		  color: yellowgreen;
+		  font-size: 60px;
+		}
+
+		p{
+		  color: #4CAF50;
+		  font-size: 25px;
+		}
+
+		.button {
+		  font-size: 25px;
+		  color: white;
+		  border-radius: 7px;
+		  border: none;
+		  background-color: #4CAF50;
+		  padding: 15px 25px;
+		  display: inline;
+		}
+
+		.button:hover {
+		  cursor: pointer;
+		}
+
+		.button2{
+		  margin-left: 10px; 
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class='div1'>
+	  		<h1 class='title'>Hallohaaa</h1>
+		</div>
+
+		<div class='div2'>
+	  		<p>Say Hi</p>
+	  		<input class='button button1' type='button' value='YES'>
+	  		<input class='button button2' type='button' value='NO'>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+	
+		document.querySelector('.button1').addEventListener('click', function() {
+	      document.querySelector('h1').style.visibility = "visible";    
+	 	})
+
+		document.querySelector('.button2').addEventListener('click', function(){
+	      document.querySelector('h1').style.visibility="hidden";
+		})
+
+		
+
+
+
+	</script>
+</body>
+</html>
