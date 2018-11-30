@@ -8,17 +8,15 @@ function reverse(str) {
 
 	for(var i=str.length-1; i>=0; i--) {
 
-		newString += str[i]	
+		newString += str[i]	//第 i 個的 string
 	}
 
 	return newString
 }
 
-
 console.log(reverse('1,2,3,2,1'))
 console.log(reverse('1abc2'))
 console.log(reverse('yoyoyo'))
-
 
 //方法二： .reverse()
 
