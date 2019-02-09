@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 		// 設定迴圈掃必填題
-		for(let i=0; i<5; i++){
+		for(let i=0; i<4; i++){
 
 			// 抓必填題
 			//let answer = document.querySelectorAll("input.required")	

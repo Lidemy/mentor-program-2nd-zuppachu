@@ -1,0 +1,152 @@
+html, body {
+	margin:0px;
+	padding: 0px;
+	font-family: 微軟正黑體;
+	font-size: 16px;
+}
+
+.navbar {
+	position: fixed;
+	top:0;
+	left: 0;
+	right:0;
+
+	background:#fff;
+	text-align: center;
+
+	z-index:9; 
+	/*
+		讓 navbar 下拉時，不會有與文字相遮的狀況
+		plus 還可繼續使用連結～
+	*/
+}
+
+.navbar a {
+	text-decoration: none; /* 移除超連結底線 */
+	color: inherit; /* 移除超連結顏色 */
+	display: inline-block;
+}
+
+.navbar  li {
+	display: inline-block;
+	list-style: none; /* 移除項目符號 */
+	padding:5px;
+	font-size: 15px;
+	color: whitesmoke;  
+}
+
+.navbar .home {
+	color: green;
+	font-weight: 2px;
+}
+
+.navbar a:hover {
+	color: #8b8d24;
+	transition: ease, 2s;
+}
+
+.pic > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+	width: 90%;
+	margin-top: -200px;
+	background-size: cover;
+}
+
+.container{
+	margin-top: 22px;
+	width: 90%;
+	position: relative;
+}
+
+.articles {
+	width: 90%;
+	position: absolute;
+  	left:50%;
+  	top: 50%;
+  	transform: translate(-35%, 0%);
+  	
+}
+
+.article {
+	border-bottom: 3px solid whitesmoke;
+	width: 80%;
+	padding: 20px;
+	white-space: pre-line;
+}
+
+
+.article ~ .article {
+	margin-top: 20px;
+}
+
+.article a{
+	text-decoration: none;
+	color: darkgreen;
+}
+
+.article .title {
+	font-size: 25px;
+	font-weight: 5px;
+}
+
+
+footer{
+	text-align: center;
+	color: grey; 
+	height: 40px;
+
+	box-sizing: border-box;
+    
+    position: absolute;
+    bottom: 0;
+
+    display: none; /*調不好置底，先休息一下*/
+}
+
+.single-article {
+	width: 80%;
+	white-space: pre-line;
+
+
+}
+
+.single-article > p {
+	margin-top: -20px;
+}
+
+.single-article > h1 {
+	font-size: 40px;
+}
+
+.aboutme {
+	white-space: pre-line;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+
+}
+
+.aboutme h3 , .aboutme p {
+	text-align: center;
+	margin-left: 130px;
+}
+
+
+@media(max-width: 370px){
+	.container, .articles {
+		width: 80%;
+		margin-left: 30px;
+	}
+
+	.article {
+		white-space: pre-line;
+		width:70%;
+	}
+
+	footer {
+		width:80%;
+	}
+}

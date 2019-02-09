@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){
 
-  let firtNum = ''
+  let firstNum = ''
   let secondNum = ''
   let waitToOperation = ''
 
